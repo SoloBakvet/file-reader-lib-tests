@@ -1,13 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FileReaderLib.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
-
-namespace FileReaderLib.Core.Tests
+﻿namespace FileReaderLib.Core.Tests
 {
     [TestClass()]
     public class FileTests
@@ -26,7 +17,7 @@ namespace FileReaderLib.Core.Tests
             byte[] readContent = file.LoadContent();
              
             // Assert original and read values are the same. 
-            CollectionAssert.AreEqual(readContent, fileContent);
+            CollectionAssert.AreEqual(fileContent, readContent);
         }
 
         [TestMethod()]
@@ -43,7 +34,7 @@ namespace FileReaderLib.Core.Tests
             byte[] readContent = file.LoadContent();
 
             // Assert original and read values are the same. 
-            CollectionAssert.AreEqual(readContent, fileContent);
+            CollectionAssert.AreEqual(fileContent, readContent);
         }
     }
 }

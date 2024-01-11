@@ -1,12 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FileReaderLib.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FileReaderLib.Core.Tests
+﻿namespace FileReaderLib.Core.Tests
 {
     [TestClass()]
     public class TextFileTests
@@ -25,7 +17,7 @@ namespace FileReaderLib.Core.Tests
             string readContent = file.LoadContent();
 
             // Assert original and read value are the same. 
-            Assert.AreEqual(readContent, fileContent);
+            Assert.AreEqual(fileContent, readContent);
         }
 
         [TestMethod()]
@@ -45,7 +37,7 @@ namespace FileReaderLib.Core.Tests
             string readContent = file.LoadContent();
 
             // Assert original and read value are the same. 
-            Assert.AreEqual(readContent, fileContent);
+            Assert.AreEqual(fileContent, readContent);
         }
     }
 }
