@@ -24,6 +24,7 @@ namespace FileReaderLib.Core.Tests
             XmlFile file = new(fileName);
             XmlDocument readContent = file.LoadContent();
 
+            // Assert original and read values are the same. 
             Assert.AreEqual("menu", readContent.FirstChild.Name );
             Assert.AreEqual("dish", readContent.FirstChild.LastChild.Name);
             Assert.AreEqual("Beef stew with fries", readContent.FirstChild.LastChild.Attributes.GetNamedItem("name").Value);
@@ -48,6 +49,7 @@ namespace FileReaderLib.Core.Tests
             XmlFile file = new(fileName);
             XmlDocument readContent = file.LoadContent();
 
+            // Assert original and read values are the same. 
             Assert.AreEqual("movies", readContent.FirstChild.Name);
             Assert.AreEqual("movie", readContent.FirstChild.LastChild.Name);
             Assert.AreEqual("Lord of the Rings: The Fellowship of the Ring", readContent.FirstChild.FirstChild.Attributes.GetNamedItem("name").Value);
