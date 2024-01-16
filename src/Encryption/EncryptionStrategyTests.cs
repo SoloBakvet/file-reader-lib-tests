@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Design;
-using System.Text;
+﻿using System.Text;
 
 namespace FileReaderLib.Encryption.Tests
 {
